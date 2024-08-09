@@ -3,7 +3,7 @@ import { showFormattedDate } from "../utils/index.js";
 
 class NoteList extends Component {
   render() {
-    const { notes, onDelete, archived, onArchive } = this.props;
+    const { notes, onDelete, onArchive } = this.props;
 
     return (
       <div className="notes-list">
@@ -29,7 +29,7 @@ class NoteList extends Component {
                   className="note-item__archive-button"
                   onClick={() => onArchive(note.id)}
                 >
-                  {archived ? "Pindahkan" : "Arsipkan"}
+                  {note.archived ? "Pindahkan" : "Arsipkan"}
                 </button>
               </div>
             </div>
